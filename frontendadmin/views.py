@@ -131,6 +131,8 @@ def _get_template(request, app_label=None, model_name=None):
 @never_cache
 @login_required
 def add(request, app_label, model_name, mode_name='add',
+                            form_class=FrontendAdminModelForm,
+                            initial=None,
                             form_fields=None,
                             form_exclude=None):
 
@@ -175,6 +177,8 @@ def add(request, app_label, model_name, mode_name='add',
 @never_cache
 @login_required
 def change(request, app_label, model_name, instance_id, mode_name='change',
+                                           form_class=FrontendAdminModelForm,
+                                           initial=None,
                                            form_fields=None,
                                            form_exclude=None):
 
